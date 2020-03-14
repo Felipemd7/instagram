@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const PostSchema = new mongoose.Schema({
     author: String,
@@ -6,12 +6,12 @@ const PostSchema = new mongoose.Schema({
     description: String,
     hashtags: String,
     image: String,
-    likes:{
+    likes: {
         type: Number,
-        default: 0, 
+        default: 0, //começam com o valor -
     }
 },{
-    timestamps: true,//armazena data de criação e modificação no banco
-})
+    timestamps: true, //data de criação de cada registro e de alteração
+});
 
-module.exports = mongoose.model('Post',PostSchema)
+module.exports = mongoose.model('Post',PostSchema);
