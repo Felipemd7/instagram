@@ -1,9 +1,9 @@
 const express = require('express');
-const app = express();
 const mongoose = require('mongoose');
 const path = require('path')
 const cors = require('cors')//permite que qualquer API use o BackEnd
-const server = require('htpp').Server(app)
+const app = express();
+const server = require('http').Server(app)
 const io = require('socket.io')(server); //habilitando o websoket
 
 
